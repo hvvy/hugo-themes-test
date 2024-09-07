@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+    {{ if .Site.Params.enableDarkMode }}
+    <script src="{{ "js/dark-mode.js" | relURL }}"></script>
+    {{ end }}
+</head>
+<body>
+    {{ partial "header.html" . }}
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ if .Site.Params.enableSearch }}
+    {{ partial "search.html" . }}
+    <script src="{{ "js/search.js" | relURL }}"></script>
+    {{ end }}
+    <script src="{{ "js/copy-code.js" | relURL }}"></script>
+</body>
+</html>
+

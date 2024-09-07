@@ -1,0 +1,11 @@
+<footer>
+    <div class="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}">Previous</a>
+        {{ end }}
+        {{ if .Paginator.HasNext }}
+        <a href="{{ .Paginator.Next.URL }}">Next</a>
+        {{ end }}
+    </div>
+</footer>
+

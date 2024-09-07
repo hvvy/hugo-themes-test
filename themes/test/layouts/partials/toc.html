@@ -1,0 +1,11 @@
+{{ if .IsPage }}
+<aside id="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+        {{ range .TableOfContents }}
+        <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+</aside>
+{{ end }}
+

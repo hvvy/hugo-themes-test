@@ -1,0 +1,26 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My Hugo Blog"
+theme = "hugo-minimal-theme"
+enableRobotsTXT = true
+
+[params]
+  enableDarkMode = true
+  enableSearch = true
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+
